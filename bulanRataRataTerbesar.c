@@ -2,7 +2,7 @@
 
 int maxTabel(float T[], int N)
 {
-    int max = 0, i, IX;
+    int max = T[0], i, IX;
     for (i = 0; i < N; i++)
     {
         if (T[i] >= max)
@@ -31,12 +31,8 @@ int main()
         {
             sum += data_penjualan[i][j];
         }
-        bulanRataRataTerbesar[j] = (float)sum / k;
-    }
-
-    for (i = 0; i < b; i++)
-    {
-        printf("%f\n", bulanRataRataTerbesar[i]);
+        bulanRataRataTerbesar[j] = (float)sum / b;
+        printf("%f\n", bulanRataRataTerbesar[j]);
     }
 
     iMax = maxTabel(bulanRataRataTerbesar, k);
