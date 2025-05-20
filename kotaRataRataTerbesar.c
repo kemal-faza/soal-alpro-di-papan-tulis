@@ -1,3 +1,7 @@
+// Nama: Muhamad Kemal Faza
+// NIM: 24060124120013
+// Kelas: D Informatika 2024
+
 #include <stdio.h>
 
 int maxTabel(float T[], int N)
@@ -19,6 +23,7 @@ int main()
 {
     int i, j, sum, b, k, iMax;
     int data_penjualan[3][4] = {{10, 15, 10, 5}, {20, 25, 20, 15}, {10, 5, 14, 3}};
+    char *dataKota[3] = {"Semarang", "Jakarta", "Yogyakarta"};
 
     b = 3;
     k = 4;
@@ -40,18 +45,7 @@ int main()
     }
 
     iMax = maxTabel(kotaRataRataTerbesar, b);
-    if (iMax == 0)
-    {
-        printf("Kota Semarang memiliki rata-rata penjualan tertinggi.");
-    }
-    else if (iMax == 1)
-    {
-        printf("Kota Jakarta memiliki rata-rata penjualan tertinggi.");
-    }
-    else if (iMax == 2)
-    {
-        printf("Kota Yogyakarta memiliki rata-rata penjualan tertinggi.");
-    }
+    printf("Kota %s memiliki rata-rata penjualan tertinggi.", dataKota[iMax]);
 
     return 0;
 }

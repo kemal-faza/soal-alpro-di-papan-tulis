@@ -1,3 +1,7 @@
+// Nama: Muhamad Kemal Faza
+// NIM: 24060124120013
+// Kelas: D Informatika 2024
+
 #include <stdio.h>
 #include <string.h>
 
@@ -16,9 +20,8 @@ int maxTabel(int T[], int N)
     return IX;
 }
 
-int indexKota(char kota[])
+int indexKota(char kota[], char **dataKota)
 {
-    char dataKota[3][20] = {"Semarang", "Jakarta", "Yogyakarta"};
     int i, IX = -1;
     for (i = 0; i < 3; i++)
     {
@@ -36,6 +39,8 @@ int main()
     int i, j, sum, b, k, iMax;
     char kota[20];
     int data_penjualan[3][4] = {{10, 15, 10, 5}, {20, 25, 20, 15}, {10, 5, 14, 3}};
+    char *dataKota[3] = {"Semarang", "Jakarta", "Yogyakarta"};
+    char *dataBulan[4] = {"Januari", "Februari", "Maret", "April"};
 
     b = 3;
     k = 4;
@@ -44,7 +49,7 @@ int main()
     printf("Masukkan nama kota: \n");
     scanf("%s", &kota);
 
-    penjualanKota = data_penjualan[indexKota(kota)];
+    penjualanKota = data_penjualan[indexKota(kota, dataKota)];
 
     for (i = 0; i < k; i++)
     {
@@ -52,22 +57,7 @@ int main()
     }
 
     iMax = maxTabel(penjualanKota, k);
-    if (iMax == 0)
-    {
-        printf("Bulan Januari memiliki rata-rata penjualan tertinggi.");
-    }
-    else if (iMax == 1)
-    {
-        printf("Bulan Februari memiliki rata-rata penjualan tertinggi.");
-    }
-    else if (iMax == 2)
-    {
-        printf("Bulan Maret memiliki rata-rata penjualan tertinggi.");
-    }
-    else if (iMax == 3)
-    {
-        printf("Bulan April memiliki rata-rata penjualan tertinggi.");
-    }
+    printf("Penjualan %s yang tertinggi pada kota %s sebesar %d", dataKota[indexKota(kota, dataKota)], dataBulan[iMax], penjualanKota[iMax]);
 
     return 0;
 }

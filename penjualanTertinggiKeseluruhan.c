@@ -1,3 +1,7 @@
+// Nama: Muhamad Kemal Faza
+// NIM: 24060124120013
+// Kelas: D Informatika 2024
+
 #include <stdio.h>
 #include <string.h>
 

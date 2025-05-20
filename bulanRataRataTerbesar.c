@@ -1,3 +1,7 @@
+// Nama: Muhamad Kemal Faza
+// NIM: 24060124120013
+// Kelas: D Informatika 2024
+
 #include <stdio.h>
 
 int maxTabel(float T[], int N)
@@ -19,6 +23,7 @@ int main()
 {
     int i, j, sum, b, k, iMax;
     int data_penjualan[3][4] = {{10, 15, 10, 5}, {20, 25, 20, 15}, {10, 5, 14, 3}};
+    char *dataBulan[4] = {"Januari", "Februari", "Maret", "April"};
 
     b = 3;
     k = 4;
@@ -36,22 +41,7 @@ int main()
     }
 
     iMax = maxTabel(bulanRataRataTerbesar, k);
-    if (iMax == 0)
-    {
-        printf("Bulan Januari memiliki rata-rata penjualan tertinggi.");
-    }
-    else if (iMax == 1)
-    {
-        printf("Bulan Februari memiliki rata-rata penjualan tertinggi.");
-    }
-    else if (iMax == 2)
-    {
-        printf("Bulan Maret memiliki rata-rata penjualan tertinggi.");
-    }
-    else if (iMax == 3)
-    {
-        printf("Bulan April memiliki rata-rata penjualan tertinggi.");
-    }
+    printf("Bulan %s memiliki rata-rata penjualan tertinggi.", dataBulan[iMax]);
 
     return 0;
 }
